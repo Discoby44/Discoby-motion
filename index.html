@@ -1,1 +1,53 @@
-<h1>DiscoBy</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tangier In Motion</title>
+
+<style>
+
+body{
+margin:0;
+background:#111;
+overflow:hidden;
+}
+
+.slider{
+display:flex;
+width:max-content;
+animation:move 25s linear infinite;
+}
+
+.slider img{
+width:350px;
+height:220px;
+object-fit:cover;
+margin-right:15px;
+border-radius:15px;
+}
+
+@keyframes move{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(-100%);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+</div>
+
+</body>
+</html>
