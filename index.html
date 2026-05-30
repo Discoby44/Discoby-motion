@@ -1,15 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Tangier In Motion</title>
 
 <style>
 
-body{
+*{
 margin:0;
-background:#111;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0f0f0f;
 overflow:hidden;
+font-family:Georgia, serif;
+height:100vh;
+}
+
+/* المقدمة السينمائية */
+
+.intro{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:introLoop 10s infinite;
+}
+
+.intro h1{
+font-size:70px;
+letter-spacing:10px;
+color:#d8c29d;
+margin-bottom:20px;
+}
+
+.intro p{
+font-size:22px;
+color:white;
+line-height:1.8;
+max-width:800px;
+padding:0 20px;
+}
+
+/* منطقة الصور */
+
+.gallery{
+position:absolute;
+width:100%;
+height:100vh;
+display:flex;
+align-items:center;
+overflow:hidden;
+opacity:0;
+animation:galleryLoop 10s infinite;
 }
 
 .slider{
@@ -19,12 +70,14 @@ animation:move 25s linear infinite;
 }
 
 .slider img{
-width:350px;
-height:220px;
+width:420px;
+height:260px;
 object-fit:cover;
-margin-right:15px;
-border-radius:15px;
+margin-right:20px;
+border-radius:18px;
 }
+
+/* حركة الصور */
 
 @keyframes move{
 from{
@@ -35,10 +88,67 @@ transform:translateX(-100%);
 }
 }
 
+/* إظهار المقدمة أول ثانيتين */
+
+@keyframes introLoop{
+
+0%{
+opacity:1;
+}
+
+20%{
+opacity:1;
+}
+
+25%{
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+/* إظهار الصور بعد المقدمة */
+
+@keyframes galleryLoop{
+
+0%{
+opacity:0;
+}
+
+20%{
+opacity:0;
+}
+
+25%{
+opacity:1;
+}
+
+100%{
+opacity:1;
+}
+
+}
+
 </style>
 </head>
 
 <body>
+
+<div class="intro">
+
+<h1>TANGIER</h1>
+
+<p>
+Where The Atlantic Meets The Mediterranean<br>
+And Every Street Tells A Story
+</p>
+
+</div>
+
+<div class="gallery">
 
 <div class="slider">
 
@@ -47,7 +157,15 @@ transform:translateX(-100%);
 <img src="niklas-VqouWpsuziE.jpg">
 <img src="othman-alghanmi-PoJ6j3i6DLA.jpg">
 <img src="sergio-kian-jVqbmK14m-M.jpg">
-  
+
+<img src="kyriacos-georgiou-CMmgfHQiYsc.jpg">
+<img src="milad-alizadeh-RuzMCeXVsXA.jpg">
+<img src="niklas-VqouWpsuziE.jpg">
+<img src="othman-alghanmi-PoJ6j3i6DLA.jpg">
+<img src="sergio-kian-jVqbmK14m-M.jpg">
+
+</div>
+
 </div>
 
 </body>
