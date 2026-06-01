@@ -2,55 +2,87 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Tangier In Motion</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-margin:0;
-background:#111;
-overflow:hidden;
+    background:#000;
+    overflow:hidden;
 }
 
 .slider{
-display:flex;
-width:max-content;
-animation:move 25s linear infinite;
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    position:relative;
 }
 
-.slider img{
-width:350px;
-height:220px;
-object-fit:cover;
-margin-right:15px;
-border-radius:15px;
+.slide-track{
+    display:flex;
+    width:calc(1920px * 20);
+    animation:scroll 150s linear infinite;
+    will-change:transform;
 }
 
-@keyframes move{
-from{
-transform:translateX(100%);
-}
-to{
-transform:translateX(-100%);
-}
+.slide{
+    width:1920px;
+    height:1080px;
+    flex-shrink:0;
 }
 
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(calc(-1920px * 10));
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="slider">
+    <div class="slide-track">
 
-<img src="kyriacos-georgiou-CMmgfHQiYsc.jpg">
-<img src="milad-alizadeh-RuzMCeXVsXA.jpg">
-<img src="niklas-VqouWpsuziE.jpg">
-<img src="othman-alghanmi-PoJ6j3i6DLA.jpg">
-<img src="sergio-kian-jVqbmK14m-M.jpg">
-  <video autoplay muted loop playsinline width="100%">
-    <source src="VID-20260531-WA0001.mp4" type="video/mp4">
-</video>
-  
+        <!-- الصور الأصلية -->
+        <div class="slide"><img src="image1.jpg"></div>
+        <div class="slide"><img src="image2.jpg"></div>
+        <div class="slide"><img src="image3.jpg"></div>
+        <div class="slide"><img src="image4.jpg"></div>
+        <div class="slide"><img src="image5.jpg"></div>
+        <div class="slide"><img src="image6.jpg"></div>
+        <div class="slide"><img src="image7.jpg"></div>
+        <div class="slide"><img src="image8.jpg"></div>
+        <div class="slide"><img src="image9.jpg"></div>
+        <div class="slide"><img src="image10.jpg"></div>
+
+        <!-- تكرار الصور لمنع أي فراغ -->
+        <div class="slide"><img src="image1.jpg"></div>
+        <div class="slide"><img src="image2.jpg"></div>
+        <div class="slide"><img src="image3.jpg"></div>
+        <div class="slide"><img src="image4.jpg"></div>
+        <div class="slide"><img src="image5.jpg"></div>
+        <div class="slide"><img src="image6.jpg"></div>
+        <div class="slide"><img src="image7.jpg"></div>
+        <div class="slide"><img src="image8.jpg"></div>
+        <div class="slide"><img src="image9.jpg"></div>
+        <div class="slide"><img src="image10.jpg"></div>
+
+    </div>
 </div>
 
 </body>
