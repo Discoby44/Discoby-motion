@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     background:#000;
-    overflow:hidden;
 }
 
 .slider{
-    width:1920px;
-    height:1080px;
+    width:100%;
+    aspect-ratio:16/9;
     overflow:hidden;
     position:relative;
 }
 
-.slide-track{
+.track{
     display:flex;
-    width:calc(1920px * 20);
-    animation:scroll 150s linear infinite;
-    will-change:transform;
+    width:max-content;
+    animation: scroll 60s linear infinite;
 }
 
-.slide{
+.track img{
     width:1920px;
     height:1080px;
-    flex-shrink:0;
-}
-
-.slide img{
-    width:100%;
-    height:100%;
     object-fit:cover;
-    display:block;
+    flex-shrink:0;
 }
 
 @keyframes scroll{
@@ -47,7 +32,7 @@ body{
         transform:translateX(0);
     }
     to{
-        transform:translateX(calc(-1920px * 10));
+        transform:translateX(-50%);
     }
 }
 </style>
@@ -56,31 +41,18 @@ body{
 <body>
 
 <div class="slider">
-    <div class="slide-track">
+    <div class="track">
 
-        <!-- الصور الأصلية -->
-        <div class="slide"><img src="11th-gate-2eWa4jDCD84.jpg"></div>
-        <div class="slide"><img src="af8025f1c50fe07a1ab856bda31c8759.jpg"></div>
-        <div class="slide"><img src="file_000000002d0871f4975471671dc87bfb.jpg"></div>
-        <div class="slide"><img src="maximus-beaumont-J8cG8ipaRH8.jpg"></div>
-        <div class="slide"><img src="Soul_20251129_224514_0000.jpg"></div>
-        <div class="slide"><img src="image6.jpg"></div>
-        <div class="slide"><img src="image7.jpg"></div>
-        <div class="slide"><img src="image8.jpg"></div>
-        <div class="slide"><img src="image9.jpg"></div>
-        <div class="slide"><img src="image10.jpg"></div>
+        <img src="image1.jpg">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+        <img src="image4.jpg">
 
-        <!-- تكرار الصور لمنع أي فراغ -->
-        <div class="slide"><img src="image1.jpg"></div>
-        <div class="slide"><img src="image2.jpg"></div>
-        <div class="slide"><img src="image3.jpg"></div>
-        <div class="slide"><img src="image4.jpg"></div>
-        <div class="slide"><img src="image5.jpg"></div>
-        <div class="slide"><img src="image6.jpg"></div>
-        <div class="slide"><img src="image7.jpg"></div>
-        <div class="slide"><img src="image8.jpg"></div>
-        <div class="slide"><img src="image9.jpg"></div>
-        <div class="slide"><img src="image10.jpg"></div>
+        <!-- تكرار الصور لمنع الانقطاع -->
+        <img src="image1.jpg">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+        <img src="image4.jpg">
 
     </div>
 </div>
