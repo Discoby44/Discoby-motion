@@ -1,67 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangier In Motion</title>
 
 <style>
+
 body{
-    margin:0;
-    background:#000;
+margin:0;
+background:#111;
+overflow:hidden;
 }
 
-.slider-container{
-    width:100%;
-    max-width:1920px;
-    aspect-ratio:16/9;
-    overflow:hidden;
-    position:relative;
-    margin:auto;
-    border-radius:20px;
+.slider{
+display:flex;
+width:max-content;
+animation:move 25s linear infinite;
 }
 
-.slider-track{
-    display:flex;
-    width:max-content;
-    animation: scroll 60s linear infinite;
+.slider img{
+width:350px;
+height:220px;
+object-fit:cover;
+margin-right:15px;
+border-radius:15px;
 }
 
-.slider-track img{
-    width:1920px;
-    height:1080px;
-    object-fit:cover;
-    flex-shrink:0;
+@keyframes move{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(-100%);
+}
 }
 
-@keyframes scroll{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
 </style>
 </head>
 
 <body>
 
-<div class="slider-container">
-    <div class="slider-track">
+<div class="slider">
 
-        <!-- الصور الأصلية -->
-        <img src="11th-gate-2eWa4jDCD84.jpg">
-        <img src="11th-gate-2eWa4jDCD84.jpg">
-        <img src="image3.jpg">
-        <img src="image4.jpg">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
 
-        <!-- تكرار الصور لمنع أي انقطاع -->
-        <img src="image1.jpg">
-        <img src="image2.jpg">
-        <img src="image3.jpg">
-        <img src="image4.jpg">
-
-    </div>
 </div>
 
 </body>
