@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tangier In Motion</title>
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-margin:0;
-background:#111;
-overflow:hidden;
+    background:#111;
+    overflow:hidden;
 }
 
-.slider{
-display:flex;
-width:max-content;
-animation:move 25s linear infinite;
+.slider-container{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+    position:relative;
 }
 
-.slider img{
-width:350px;
-height:220px;
-object-fit:cover;
-margin-right:15px;
-border-radius:15px;
+.slider-track{
+    display:flex;
+    width:max-content;
+    animation:scroll 60s linear infinite;
 }
 
-@keyframes move{
-from{
-transform:translateX(100%);
+.slider-track img{
+    width:800px;
+    height:450px;
+    object-fit:cover;
+    flex-shrink:0;
+    margin-right:15px;
+    border-radius:18px;
 }
-to{
-transform:translateX(-100%);
-}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(calc(-50%));
+    }
 }
 
 </style>
@@ -40,12 +54,29 @@ transform:translateX(-100%);
 
 <body>
 
-<div class="slider">
+<div class="slider-container">
 
-<img src="af8025f1c50fe07a1ab856bda31c8759.jpg">
-<img src="ayoub-sediri-nOkeW2_0fXQ.jpg">
-<img src="gunnar-ridderström-b8cJDrBf9As.jpg">
-<img src="pexels-saad-meliani-3671245-5823800.jpg">
+<div class="slider-track">
+
+    <!-- الصور الأصلية -->
+
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+
+    <!-- نفس الصور مرة ثانية لمنع الانقطاع -->
+
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+
+</div>
 
 </div>
 
